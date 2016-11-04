@@ -1,0 +1,23 @@
+ISim log file
+Running: F:\work2\work54\test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/work2/work54/test_isim_beh.wdb 
+ISim O.40d (signature 0xc4ca3437)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 200ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Oct 27 03:46:35 2016
+# Process ID: 6084
+# Log file: F:/work2/work54/planAhead_run_2/planAhead.log
+# Journal file: F:/work2/work54/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source F:/work2/work54/pa.fromNetlist.tcl

@@ -1,0 +1,82 @@
+xst -intstyle ise -ifn "F:/work2/work55/CK.xst" -ofn "F:/work2/work55/CK.syr" 
+xst -intstyle ise -ifn "F:/work2/work55/CK.xst" -ofn "F:/work2/work55/CK.syr" 
+xst -intstyle ise -ifn "F:/work2/work55/CK.xst" -ofn "F:/work2/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "F:/work2/work55/CK.xst" -ofn "F:/work2/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+xst -intstyle ise -ifn "F:/work2/work55/CK.xst" -ofn "F:/work2/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+xst -intstyle ise -ifn "E:/work55/work55/CK.xst" -ofn "E:/work55/work55/CK.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CK.ucf -p xc3s1200e-fg320-4 CK.ngc CK.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CK_map.ncd CK.ngd CK.pcf 
+par -w -intstyle ise -ol high -t 1 CK_map.ncd CK.ncd CK.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CK.twx CK.ncd -o CK.twr CK.pcf -ucf CK.ucf 
+bitgen -intstyle ise -f CK.ut CK.ncd 

@@ -1,0 +1,36 @@
+
+
+NET "InputSW[0]" LOC = R1;
+NET "InputSW[1]" LOC = N2;
+NET "InputSW[2]" LOC = N1;
+NET "InputSW[3]" LOC = M1;
+NET "InputSW[4]" LOC = K7;
+NET "InputSW[5]" LOC = K2;
+NET "InputSW[6]" LOC = J7;
+NET "InputSW[7]" LOC = J6;
+NET "OutputL[0]" LOC = D10;
+NET "OutputL[1]" LOC = E10;
+NET "OutputL[2]" LOC = A11;
+NET "OutputL[3]" LOC = B11;
+NET "OutputL[4]" LOC = C11;
+NET "OutputL[5]" LOC = D11;
+NET "OutputL[6]" LOC = E11;
+NET "OutputL[7]" LOC = F11;
+NET "Ram1Data[0]" LOC = J12;
+NET "Ram1Data[1]" LOC = J13;
+NET "Ram1Data[2]" LOC = J14;
+NET "Ram1Data[3]" LOC = J15;
+NET "Ram1Data[4]" LOC = J16;
+NET "Ram1Data[5]" LOC = J17;
+NET "Ram1Data[6]" LOC = K12;
+NET "Ram1Data[7]" LOC = K13;
+NET "Ram1EN" LOC = M15;
+NET "Ram1OE" LOC = M16;
+NET "Ram1WE" LOC = M18;
+NET "clk" LOC = B8;
+NET "data_ready" LOC = A16;
+NET "rdn" LOC = C14;
+NET "rst" LOC = U10;
+NET "tbre" LOC = D14;
+NET "tsre" LOC = N9;
+NET "wrn" LOC = U5;

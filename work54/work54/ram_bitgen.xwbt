@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\work2\work54\ram.ncd
+OUTFILE=F:\work2\work54\ram.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=F:\work2\work54
+LICENSE=WebPack
+USER_INFO=__0_0_0
