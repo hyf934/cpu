@@ -1,0 +1,486 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: ram.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ram.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ram"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : ram
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/work54/work54/ram.vhd" in Library work.
+Entity <ram> compiled.
+Entity <ram> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ram> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ram> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <Ram1EN> in unit <ram> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Ram2EN> in unit <ram> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ram> analyzed. Unit <ram> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ram>.
+    Related source file is "D:/work54/work54/ram.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 17                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 21                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000000000000000000000000000               |
+    | Power Up State     | 00000000000000000000000000000000               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit register for signal <OutputL>.
+    Found 18-bit register for signal <Ram1Addr>.
+    Found 18-bit register for signal <Ram2Addr>.
+    Found 16-bit tristate buffer for signal <Ram1Data>.
+    Found 16-bit tristate buffer for signal <Ram2Data>.
+    Found 1-bit register for signal <Ram1OE>.
+    Found 1-bit register for signal <Ram2OE>.
+    Found 1-bit register for signal <Ram1WE>.
+    Found 1-bit register for signal <Ram2WE>.
+    Found 18-bit register for signal <addr>.
+    Found 18-bit adder for signal <addr$add0000> created at line 98.
+    Found 18-bit subtractor for signal <addr$sub0001> created at line 115.
+    Found 16-bit register for signal <data>.
+    Found 16-bit adder for signal <data$addsub0000> created at line 97.
+    Found 32-bit register for signal <i>.
+    Found 32-bit adder for signal <i$addsub0000> created at line 135.
+    Found 16-bit register for signal <Mtridata_Ram1Data> created at line 62.
+    Found 16-bit register for signal <Mtridata_Ram2Data> created at line 69.
+    Found 16-bit subtractor for signal <Mtridata_Ram2Data$sub0000> created at line 127.
+    Found 1-bit register for signal <Mtrien_Ram1Data> created at line 62.
+    Found 1-bit register for signal <Mtrien_Ram2Data> created at line 69.
+    Found 32-bit adder for signal <state$add0000> created at line 114.
+    Found 32-bit comparator less for signal <state$cmp_lt0000> created at line 100.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 156 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  32 Tristate(s).
+Unit <ram> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+# Registers                                            : 31
+ 1-bit register                                        : 24
+ 16-bit register                                       : 4
+ 18-bit register                                       : 2
+ 32-bit register                                       : 1
+# Comparators                                          : 1
+ 32-bit comparator less                                : 1
+# Tristates                                            : 2
+ 16-bit tristate buffer                                : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:13]> with one-hot encoding.
+---------------------------------------------------
+ State                            | Encoding
+---------------------------------------------------
+ 00000000000000000000000000000000 | 0000000000001
+ 00000000000000000000000000000001 | 0000000000010
+ 00000000000000000000000000000010 | 0000000000100
+ 00000000000000000000000000000011 | 0000000001000
+ 00000000000000000000000000000100 | 0000000010000
+ 00000000000000000000000000000101 | 0000000100000
+ 00000000000000000000000000000110 | 0000001000000
+ 00000000000000000000000000000111 | 0000010000000
+ 00000000000000000000000000001000 | 0000100000000
+ 00000000000000000000000000001001 | 0001000000000
+ 00000000000000000000000000001010 | 0010000000000
+ 00000000000000000000000000001011 | 0100000000000
+ 00000000000000000000000000001100 | 1000000000000
+---------------------------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+# Registers                                            : 156
+ Flip-Flops                                            : 156
+# Comparators                                          : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ram> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ram, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 169
+ Flip-Flops                                            : 169
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ram.ngr
+Top Level Output File Name         : ram
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 115
+
+Cell Usage :
+# BELS                             : 729
+#      GND                         : 1
+#      INV                         : 41
+#      LUT1                        : 98
+#      LUT2                        : 6
+#      LUT2_D                      : 1
+#      LUT3                        : 74
+#      LUT4                        : 130
+#      LUT4_D                      : 5
+#      LUT4_L                      : 61
+#      MUXCY                       : 145
+#      MUXF5                       : 34
+#      VCC                         : 1
+#      XORCY                       : 132
+# FlipFlops/Latches                : 169
+#      FDC                         : 96
+#      FDCE                        : 52
+#      FDP                         : 19
+#      FDPE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 114
+#      IBUF                        : 17
+#      IOBUF                       : 32
+#      OBUF                        : 65
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                      214  out of   8672     2%  
+ Number of Slice Flip Flops:            169  out of  17344     0%  
+ Number of 4 input LUTs:                416  out of  17344     2%  
+ Number of IOs:                         115
+ Number of bonded IOBs:                 115  out of    250    46%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 169   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+--------------------------+-------+
+Control Signal                     | Buffer(FF name)          | Load  |
+-----------------------------------+--------------------------+-------+
+rst_inv(rst_inv311_INV_0:O)        | NONE(Mtridata_Ram1Data_0)| 169   |
+-----------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.397ns (Maximum Frequency: 87.742MHz)
+   Minimum input arrival time before clock: 4.990ns
+   Maximum output required time after clock: 7.322ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 11.397ns (frequency: 87.742MHz)
+  Total number of paths / destination ports: 47260 / 204
+-------------------------------------------------------------------------
+Delay:               11.397ns (Levels of Logic = 35)
+  Source:            i_1 (FF)
+  Destination:       i_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i_1 to i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  i_1 (i_1)
+     LUT1:I0->O            1   0.704   0.000  Madd_state_add0000_cy<1>_rt (Madd_state_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_state_add0000_cy<1> (Madd_state_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<2> (Madd_state_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<3> (Madd_state_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<4> (Madd_state_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<5> (Madd_state_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<6> (Madd_state_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<7> (Madd_state_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<8> (Madd_state_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<9> (Madd_state_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<10> (Madd_state_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<11> (Madd_state_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<12> (Madd_state_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<13> (Madd_state_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<14> (Madd_state_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<15> (Madd_state_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<16> (Madd_state_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<17> (Madd_state_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<18> (Madd_state_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<19> (Madd_state_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<20> (Madd_state_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<21> (Madd_state_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<22> (Madd_state_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<23> (Madd_state_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<24> (Madd_state_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<25> (Madd_state_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<26> (Madd_state_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_state_add0000_cy<27> (Madd_state_add0000_cy<27>)
+     XORCY:CI->O           4   0.804   0.762  Madd_state_add0000_xor<28> (state_add0000<28>)
+     LUT3:I0->O            1   0.704   0.000  Mcompar_state_cmp_lt0000_lut<9> (Mcompar_state_cmp_lt0000_lut<9>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_state_cmp_lt0000_cy<9> (Mcompar_state_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           8   0.459   0.761  Mcompar_state_cmp_lt0000_cy<10> (Mcompar_state_cmp_lt0000_cy<10>)
+     LUT4_D:I3->O         14   0.704   1.004  i_mux0000<0>11 (N0)
+     LUT4_L:I3->LO         1   0.704   0.104  i_mux0000<21>_SW0 (N190)
+     LUT4:I3->O            1   0.704   0.000  i_mux0000<21> (i_mux0000<21>)
+     FDC:D                     0.308          i_10
+    ----------------------------------------
+    Total                     11.397ns (8.144ns logic, 3.253ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 248 / 80
+-------------------------------------------------------------------------
+Offset:              4.990ns (Levels of Logic = 4)
+  Source:            InputSW<1> (PAD)
+  Destination:       addr_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: InputSW<1> to addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.622  InputSW_1_IBUF (InputSW_1_IBUF)
+     LUT4:I2->O            1   0.704   0.455  addr_1_mux00004 (addr_1_mux00004)
+     LUT4_L:I2->LO         1   0.704   0.275  addr_1_mux00007 (addr_1_mux00007)
+     LUT3:I0->O            1   0.704   0.000  addr_1_mux000013 (addr_1_mux0000)
+     FDC:D                     0.308          addr_1
+    ----------------------------------------
+    Total                      4.990ns (3.638ns logic, 1.352ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 149 / 95
+-------------------------------------------------------------------------
+Offset:              7.322ns (Levels of Logic = 3)
+  Source:            state_FSM_FFd13 (FF)
+  Destination:       DYP1<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: state_FSM_FFd13 to DYP1<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             21   0.591   1.207  state_FSM_FFd13 (state_FSM_FFd13)
+     LUT4:I1->O            1   0.704   0.424  state_FSM_Out15_SW0 (N14)
+     LUT4:I3->O            1   0.704   0.420  state_FSM_Out15 (DYP1_5_OBUF)
+     OBUF:I->O                 3.272          DYP1_5_OBUF (DYP1<5>)
+    ----------------------------------------
+    Total                      7.322ns (5.271ns logic, 2.051ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.34 secs
+ 
+--> 
+
+Total memory usage is 298616 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

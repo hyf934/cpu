@@ -1,0 +1,8 @@
+Release 14.6 Drc P.68d (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Nov 07 21:04:00 2016
+
+drc -z ram.ncd ram.pcf
+
+DRC detected 0 errors and 0 warnings.

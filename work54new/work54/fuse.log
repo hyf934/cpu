@@ -1,0 +1,19 @@
+Running: F:\ise\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o F:/work2/work54/test_isim_beh.exe -prj F:/work2/work54/test_beh.prj work.test 
+ISim O.40d (signature 0xc4ca3437)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "F:/work2/work54/ram.vhd" into library work
+Parsing VHDL file "F:/work2/work54/test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Compiling architecture behavioral of entity ram [ram_default]
+Compiling architecture behavior of entity test
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable F:/work2/work54/test_isim_beh.exe
+Fuse Memory Usage: 19236 KB
+Fuse CPU Usage: 202 ms
